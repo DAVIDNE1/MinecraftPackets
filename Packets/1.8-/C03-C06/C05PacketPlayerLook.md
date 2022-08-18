@@ -6,7 +6,7 @@ However just because this packet updates rotation state, it does not mean you sh
 
 Instead you should modify the C03 your client sends every tick. An example of how to do this (using the most common tutorials event system) would be:
 
-`
+```
 if(e instanceof EventMotion && e.isPre()) {
 
 	final EventMotion event = (EventMotion)e;
@@ -14,5 +14,5 @@ if(e instanceof EventMotion && e.isPre()) {
 	event.setPitch(-90);
 
 }
-`
+```
 
