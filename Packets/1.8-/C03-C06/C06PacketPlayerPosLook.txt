@@ -1,9 +1,13 @@
-C06PacketPlayerPosLook is a packet that is sent when both the clients rotation and position have changed since the last tick. Of course this means it contains the data of position, rotation, and groundstate.
+C06PacketPlayerPosLook is a packet that is sent when both the clients rotation and position have changed since the last tick. 
+Of course this means it contains the data of position, rotation, and groundstate.
 
 This packet is also sent by the client when responding to S08PacketPlayerPosLook, a packet sent to the client by the server. 
 
-Since I'm sure, based on the last two packets, you understand what this one does. However modifying this packet can be used to bypass a server, the most famous Minecraft server infact.
+Since I'm sure, based on the last two packets, you understand what this one does. 
+However modifying this packet can be used to bypass a server, the most famous Minecraft server infact.
 
-When the server sends a S08PacketPlayerPosLook to the server, you can cancel the vanilla response and instead send a C04PacketPlayerPosition. This packet will still of course contain the same position information as the C06 did, however on some anticheats, like Watchdog, it can disable strafe checks entirely.
+When the server sends a S08PacketPlayerPosLook to the server, you can cancel the vanilla response and instead send a C04PacketPlayerPosition. 
+
+This packet will still of course contain the same position information as the C06 did, however on some anticheats, like Watchdog, it can disable strafe checks entirely.
 
 
