@@ -8,13 +8,13 @@ C03PacketPlayer itself only does one thing, it updates ground state. This is sen
 
 An example of using this packet would be:
 
-`
+```
 if(mc.thePlayer.fallDistance>2) {
 
 	mc.thePlayer.sendQueue.addToSendQueue(new C03PacketPlayer(true));
 
 }
-`
+```
 This is a very basic anti fall damage, and is one of C03's many uses.
 
 However C03 actually does alot more then it appears, in 1.8 Minecraft, this packet controls:
