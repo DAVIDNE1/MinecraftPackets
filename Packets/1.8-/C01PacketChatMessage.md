@@ -10,4 +10,4 @@ The packet the client sends to send a chat packet to the server. The vanilla cli
         }
 
         this.message = messageIn;
-    }`
+    }
