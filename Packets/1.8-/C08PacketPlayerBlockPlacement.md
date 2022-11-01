@@ -22,11 +22,11 @@ field_179726_a is a blockpos with the coordinates of (-1, -1, -1)
 
 - ItemStack stackIn - This is the item we attempt to place with, if you have one item in your hand but attempt to place with another, the block will be placed (if you have a real block) but it will be delayed, make sure to always send the spoofed slot with your scaffold
 
-- float facingXIn - This is the face on X where we are placing, this is used in MC to determine the slab rotation
+- float facingXIn - This is the side of the block on X Position
 
-- float facingYIn - This is the face on Y where we are placing, this is used in MC to determine the slab rotation
+- float facingYIn - This is the side of the block on Y Position
 
-- float facingZIn - This is the face on Z where we are placing, this is used in MC to determine the slab rotation
+- float facingZIn - This is the side of the block on Z Position
 
 
 ## Called
