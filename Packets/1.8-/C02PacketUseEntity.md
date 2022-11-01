@@ -11,11 +11,11 @@ OR
 ## Example
 ### Attacking
 ```java
-mc.thePlayer.sendQueue.addToSendQueueSilent(new C02PacketUseEntity(entity, C02PacketUseEntity.Action.ATTACK));
+Minecraft.getMinecraft().getNetHandler().sendQueue.addToSendQueueSilent(new C02PacketUseEntity(entity, C02PacketUseEntity.Action.ATTACK));
 ```
 ### Interacting
 ```java
-mc.thePlayer.sendQueue.addToSendQueueSilent(new C02PacketUseEntity(target, C02PacketUseEntity.Action.INTERACT));
+Minecraft.getMinecraft().getNetHandler().addToSendQueueSilent(new C02PacketUseEntity(target, C02PacketUseEntity.Action.INTERACT));
 ```
 ---
 ### Action Types
