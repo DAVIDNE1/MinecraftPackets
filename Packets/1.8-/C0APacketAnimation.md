@@ -1,9 +1,16 @@
 # C0APacketAnimation
 
-Swing animation
+This packet is used for swinging.
 
-## Attack
-In 1.8 MC this is sent pre attack
+## Called
 
-## Block
-This is sent post block placement if the place was succesful
+### Swinging
+This packet is called whenever the player presses the attack button.
+
+### Block
+This packet is sent when the player places a block.
+
+## Example
+```java
+mc.getNetHandler().addToSendQueue(new C0APacketAnimation());
+```
