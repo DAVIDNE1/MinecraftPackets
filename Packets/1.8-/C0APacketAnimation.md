@@ -4,10 +4,10 @@ This packet is used for swinging.
 
 ## Called
 
-### Swinging
+### SwingItem
 This packet is called whenever the player presses the attack button.
 
-### Block
+### BlockPlacement
 This packet is sent when the player places a block.
 
 ## Example
