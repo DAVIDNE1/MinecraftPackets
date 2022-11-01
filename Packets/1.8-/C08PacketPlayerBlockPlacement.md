@@ -6,7 +6,7 @@
 
 the only parameter is the item, ItemStack stackIn,
 
-every other parameter is automatically filled out as this(field_179726_a, 255, stackIn, 0.0F, 0.0F, 0.0F);
+every other parameter is automatically filled out as `this(field_179726_a, 255, stackIn, 0.0F, 0.0F, 0.0F);`
 
 field_179726_a is a blockpos with the coordinates of (-1, -1, -1)
 
