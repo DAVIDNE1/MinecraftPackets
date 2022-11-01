@@ -1,10 +1,10 @@
-### C02PacketUseEntity
+# C02PacketUseEntity
 
 ## Parameters
 
-# 1.  Entity entity // This is the entity thats being interacted with in some form
+### 1.  Entity entity // This is the entity thats being interacted with in some form
 
-# 3.  C02PacketUseEntity.Action action // This is the action we are performing
+### 3.  C02PacketUseEntity.Action action // This is the action we are performing
 
 ---
 ### Types of actions
