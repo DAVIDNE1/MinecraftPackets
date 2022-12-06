@@ -18,6 +18,8 @@ Doing this tricks the vanilla server into believing the client is always on grou
 You can also exploit a variety of other things by sending more or less position updates then the client would normally. Remember earlier how we learned that things like eating, breathing, regeneration, and more were all based off of these updates? By sending more of these updates you can eat faster or regenerate faster. Or by sending less in water you could stay underwater longer without drowning.
 
 ## Related
-[C04PacketPlayerPosition](https://github.com/Spinyfish/MinecraftPackets/blob/main/Packets/1.8-/C03-C06/C04PacketPlayerPosition.md)
-[C05PacketPlayerLook](https://github.com/Spinyfish/MinecraftPackets/blob/main/Packets/1.8-/C03-C06/C05PacketPlayerLook.md)
-[C06PacketPlayerPosLook](https://github.com/Spinyfish/MinecraftPackets/blob/main/Packets/1.8-/C03-C06/C06PacketPlayerPosLook.txt)
+> [C04PacketPlayerPosition](https://github.com/Spinyfish/MinecraftPackets/blob/main/Packets/1.8-/C03-C06/C04PacketPlayerPosition.md)
+
+> [C05PacketPlayerLook](https://github.com/Spinyfish/MinecraftPackets/blob/main/Packets/1.8-/C03-C06/C05PacketPlayerLook.md)
+
+> [C06PacketPlayerPosLook](https://github.com/Spinyfish/MinecraftPackets/blob/main/Packets/1.8-/C03-C06/C06PacketPlayerPosLook.txt)
