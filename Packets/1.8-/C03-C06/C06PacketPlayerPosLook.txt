@@ -1,13 +1,23 @@
-C06PacketPlayerPosLook is a packet that is sent when both the clients rotation and position have changed since the last tick. 
-Of course this means it contains the data of position, rotation, and groundstate.
+# C06PacketPlayerPosLook
+C06PacketPlayerPosLook is a subclass of [C03PacketPlayer](https://github.com/Spinyfish/MinecraftPackets/blob/main/Packets/1.8-/C03-C06/C03PacketPlayer.md), it updates all three things that [C03PacketPlayer](https://github.com/Spinyfish/MinecraftPackets/blob/main/Packets/1.8-/C03-C06/C03PacketPlayer.md), [C04PacketPlayerPosition](https://github.com/Spinyfish/MinecraftPackets/blob/main/Packets/1.8-/C03-C06/C04PacketPlayerPosition.md), and [C05PacketPlayerLook](https://github.com/Spinyfish/MinecraftPackets/blob/main/Packets/1.8-/C03-C06/C05PacketPlayerLook.md) update. This means this packet tells the server three things, the clients ground state, the clients position, and the clients rotation.
 
-This packet is also sent by the client when responding to S08PacketPlayerPosLook, a packet sent to the client by the server. 
+## Params
 
-Since I'm sure, based on the last two packets, you understand what this one does. 
-However modifying this packet can be used to bypass a server, the most famous Minecraft server infact.
-
-When the server sends a S08PacketPlayerPosLook to the server, you can cancel the vanilla response and instead send a C04PacketPlayerPosition. 
-
-This packet will still of course contain the same position information as the C06 did, however on some anticheats, like Watchdog, it can disable strafe checks entirely.
-
-
+```java
+ public C06PacketPlayerPosLook(final double playerX, final double playerY, final double playerZ, final float playerYaw, final float playerPitch, final boolean playerIsOnGround)
+ ```
+ 
+ > playerX, the players position on the X axis
+ 
+ > playerY, the players position on the Y axis
+ 
+ > playerZ, the players position on the Z axis
+ 
+ > playerYaw, the yaw rotation of the player
+ 
+ > playerPitch, the pitch rotation of the player
+ 
+ > playerIsOnGround, the ground state, true meaning onground, false meaning off ground
+ 
+ ## Use
+ This packet is sent by the client when both its rotation and position have changed since the last position update.
