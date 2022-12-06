@@ -1,29 +1,23 @@
-Every tick your player will send a type of C03 Packet.
+# C03PacketPlayer
 
-This has a few variations from C03-C06, but all have one thing in common, which is that they update the clients Ground State.
+Every Client tick, the vanilla client will update its position to the server. Every update will update the clients ground state. C04-C06 all inherit C03 and update ground state along with a few other things.
 
-This means that every tick the player updates its ground state to either true (meaning onground) or false (meaning offground). 
+Player position updates are often used as a sort of timer. Things like eating, oxygen, health regeneration, and more are all based on how often the player sends position updates.
 
-C03PacketPlayer itself only does one thing, it updates ground state. This is sent when the player has not changed rotation or position since the last tick.
+Circling back to how C03 and all that inherit it update the clients ground state, you can exploit this to not take any fall damage.
 
-An example of using this packet would be:
+An example of this would be intercepting all C03's and setting its ground state to true
 
-```
-if(mc.thePlayer.fallDistance>2) {
-
-	mc.thePlayer.sendQueue.addToSendQueue(new C03PacketPlayer(true));
-
+```java
+if(packet instanceof C03PacketPlayer) {
+	((C03PacketPlayer) packet).setOnGround(false);	
 }
 ```
-This is a very basic anti fall damage, and is one of C03's many uses.
+Doing this tricks the vanilla server into believing the client is always on ground, as the server does not do its own ground calculations to verify this, atleast not in this fall damage scenario.
 
-However C03 actually does alot more then it appears, in 1.8 Minecraft, this packet controls:
-> how fast you regenerate
-- how fast you lose hunger
-> how fast you consume items
-- how fast you pull your bow
-> the speed of which potions run out
-- and your Oxygen (when underwater).
+You can also exploit a variety of other things by sending more or less position updates then the client would normally. Remember earlier how we learned that things like eating, breathing, regeneration, and more were all based off of these updates? By sending more of these updates you can eat faster or regenerate faster. Or by sending less in water you could stay underwater longer without drowning.
 
-This means that the client could send an extra C03 every tick, and get double the regeneration effect as a vanilla player.
-Or you could instantly eat an item by sending a bunch of C03's whilst the player is consuming.
+## Related
+[C04PacketPlayerPosition](https://github.com/Spinyfish/MinecraftPackets/blob/main/Packets/1.8-/C03-C06/C04PacketPlayerPosition.md)
+[C05PacketPlayerLook](https://github.com/Spinyfish/MinecraftPackets/blob/main/Packets/1.8-/C03-C06/C05PacketPlayerLook.md)
+[C06PacketPlayerPosLook](https://github.com/Spinyfish/MinecraftPackets/blob/main/Packets/1.8-/C03-C06/C06PacketPlayerPosLook.txt)
