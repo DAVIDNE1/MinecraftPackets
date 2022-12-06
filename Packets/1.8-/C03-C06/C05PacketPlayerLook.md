@@ -15,3 +15,10 @@ public C05PacketPlayerLook(float playerYaw, float playerPitch, boolean isOnGroun
  
  ## Use
  This packet is sent by the client when the players rotation, but not position has changed since the last position update.
+
+## Related
+> [C03PacketPlayer](https://github.com/Spinyfish/MinecraftPackets/blob/main/Packets/1.8-/C03-C06/C03PacketPlayer.md)
+
+> [C04PacketPlayerPosition](https://github.com/Spinyfish/MinecraftPackets/blob/main/Packets/1.8-/C03-C06/C04PacketPlayerPosition.md)
+
+> [C06PacketPlayerPosLook](https://github.com/Spinyfish/MinecraftPackets/blob/main/Packets/1.8-/C03-C06/C06PacketPlayerPosLook.txt)
