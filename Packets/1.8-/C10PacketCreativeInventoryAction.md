@@ -37,7 +37,7 @@ public C10PacketCreativeInventoryAction(int slotIdIn, ItemStack stackIn)
 ## Use
 
 ```java
-/**
+    /**
      * Used in PlayerControllerMP to update the server with an ItemStack in a slot.
      */
     public void sendSlotPacket(ItemStack itemStackIn, int slotId) {
