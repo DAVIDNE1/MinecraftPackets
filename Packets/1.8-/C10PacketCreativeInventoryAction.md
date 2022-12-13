@@ -1,6 +1,6 @@
 # C10PacketCreativeInventoryAction
 
-This packet is sent by the client when in creative, it can be used to generate any item (see the params <link>).
+This packet is sent by the client when in creative, it can be used to generate any item (see the [Parameters](https://github.com/Spinyfish/MinecraftPackets/blob/main/Packets/1.8-/C10PacketCreativeInventoryAction.md#params).
 
 ```java
     void sendSlotPacket
