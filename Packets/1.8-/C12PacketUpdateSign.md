@@ -45,7 +45,7 @@ if (!(tileentity instanceof TileEntitySign)) {
 ```
 And finally it confirms the sign has not already been edited, and if it has been edited it warns the server.
 ```java
-if (!tileentitysign.getIsEditable() || tileentitysign.getPlayer() != this.playerEntity) {
+if (!tileentitysign.getIsEditable()) {
   this.serverController.logWarning("Player " + this.playerEntity.getName() + " just tried to change non-editable sign");
   return;
 }
