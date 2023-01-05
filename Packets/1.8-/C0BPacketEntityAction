@@ -1,1 +1,27 @@
+
+# C0BPacketEntityAction
 Sent by the client to the server to perform a specific action (e.g. start sprinting, enter a bed).
+
+## Params
+- Entity entity - T entity thats being interacted with in some form
+- C02PacketUseEntity.Action action - This is the action we are performing
+OR
+- Entity entity - T entity thats being interacted with in some form
+- Vec3 hitVec - The vector of where you were facing when you hit
+
+## Example
+### Attacking
+```java
+Minecraft.getMinecraft().getNetHandler().sendQueue.addToSendQueueSilent(new C02PacketUseEntity(entity, C02PacketUseEntity.Action.ATTACK));
+```
+### Interacting
+```java
+Minecraft.getMinecraft().getNetHandler().addToSendQueueSilent(new C02PacketUseEntity(target, C02PacketUseEntity.Action.INTERACT));
+```
+---
+### Action Types
+```
+INTERACT,
+ATTACK,
+INTERACT_AT;
+```
